@@ -15,9 +15,6 @@ use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 
 Route::get('/', 'PagesController@root')->name('root');
-Route::prefix('admin')->group(function () {
-    Route::get('/hello/{name}', 'admin\IndexController@index')->where(['name' => '[a-zA-Z]+',]);
-});
 Auth::routes(['verify' => true]);
 // auth 中间件代表需要登录，verified中间件代表需要经过邮箱验证
 Route::group(['middleware'=>['auth','verified']],function(){
