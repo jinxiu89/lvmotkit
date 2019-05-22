@@ -2,6 +2,8 @@
   <dictionary name="kevin">
     <words>
       <w>authenticatable</w>
+      <w>fillable</w>
+      <w>skus</w>
     </words>
   </dictionary>
 </component>
