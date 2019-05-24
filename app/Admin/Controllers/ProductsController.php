@@ -53,7 +53,7 @@ class ProductsController extends Controller
     public function edit($id, Content $content)
     {
         return $content
-            ->header('Edit')
+            ->header('编辑商品')
             ->description('description')
             ->body($this->form()->edit($id));
     }
@@ -72,10 +72,10 @@ class ProductsController extends Controller
             ->body($this->form());
     }
 
-//    public function store()
-//    {
-//        return $this->form()->store();
-//    }
+    public function update($id)
+    {
+        return $this->form()->update($id);
+    }
 
     /**
      * Make a grid builder.
