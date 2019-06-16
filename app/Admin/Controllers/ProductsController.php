@@ -131,6 +131,7 @@ class ProductsController extends Controller
         return $show;
     }
 
+
     /**
      * Make a form builder.
      *
