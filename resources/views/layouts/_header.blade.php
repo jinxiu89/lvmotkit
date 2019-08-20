@@ -15,8 +15,8 @@
             <ul class="navbar-nav navbar-right">
                 <!-- Authentication Links -->
                 @guest
-                    <li class="nav-item"><a class="nav-link" href="{{ route('login') }}">login</a></li>
-                    <li class="nav-item"><a class="nav-link" href="{{ route('register') }}">login</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{{ route('login') }}">sigin in</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{{ route('register') }}">sigin up</a></li>
                 @else
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
