@@ -5,6 +5,7 @@
 /vendor
 /public/js
 /public/css
+/public/fonts
 .env
 .phpunit.result.cache
 Homestead.json

@@ -37,11 +37,11 @@
                                 <div class="product-content">
                                     <div class="top">
                                         <div class="img"><a
-                                                    href="{{ route('products.show',['product'=>$product->id]) }}"><img
-                                                        src="{{ $product->image }}" alt=""></a></div>
+                                                href="{{ route('products.show',['product'=>$product->id]) }}"><img
+                                                    src="{{ $product->image }}" alt=""></a></div>
                                         <div class="price"><b>￥</b>{{ $product->price }}</div>
                                         <div class="title"><a
-                                                    href="{{ route('products.show',['product'=>$product->id]) }}">{{ $product->title }}</a>
+                                                href="{{ route('products.show',['product'=>$product->id]) }}">{{ $product->title }}</a>
                                         </div>
                                     </div>
                                     <div class="bottom">
@@ -67,7 +67,7 @@
             $('.search-form select[name=order]').val(filters.order);
             $('.search-form select[name=order]').on('change', function () {
                 $('.search-form').submit();
-            })
-        })
+            });
+        });
     </script>
 @endsection
