@@ -8,15 +8,6 @@ use App\Models\ProductSku;
 
 class OrderRequest extends FormRequest
 {
-    /**
-     * Determine if the user is authorized to make this request.
-     *
-     * @return bool
-     */
-//    public function authorize()
-//    {
-//        return false;
-//    }
 
     /**
      * Get the validation rules that apply to the request.
@@ -33,7 +24,7 @@ class OrderRequest extends FormRequest
                 Rule::exists('user_addresses', 'id')->where('user_id', $this->user()->id),
             ],
             'items'  => ['required', 'array'],
-            'items.*.sku_id' => [ // 检查 items 数组下每一个子数组的 sku_id 参数
+            'items.*.sku_id' => array( // 检查 items 数组下每一个子数组的 sku_id 参数
                 'required',
                 function ($attribute, $value, $fail) {
                     if (!$sku = ProductSku::find($value)) {
@@ -54,7 +45,7 @@ class OrderRequest extends FormRequest
                         return $fail('该商品库存不足');
                     }
                 },
-            ],
+            ),
             'items.*.amount' => ['required', 'integer', 'min:1'],
         ];
     }
