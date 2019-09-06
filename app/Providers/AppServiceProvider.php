@@ -25,6 +25,7 @@ class AppServiceProvider extends ServiceProvider
                 $config['model'] = 'dev';
                 $config['log']['level'] = Logger::DEBUG;
             } else {
+                $config['model'] = 'dev';
                 $config['log']['level'] = Logger::WARNING;
             }
             return Pay::alipay($config);
